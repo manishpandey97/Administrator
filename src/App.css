@@ -1,0 +1,655 @@
+#root {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+/* COMMON CSS */
+.input {
+  padding: 5px;
+  font-size: large;
+  background-color: rgba(128, 128, 128, 0.269);
+  border: 5px solid azure;
+  border-radius: 10px;
+}
+
+.a {
+  width: 15%;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.b {
+  width: 22%;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.c {
+  width: 15%;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.d {
+  width: 18vw;
+  text-align: center;
+}
+
+.e {
+  width: 22%;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.hello {
+  font-size: large;
+  font-weight: 600;
+  height: 2vh;
+  padding: 5px;
+  word-break: break-word;
+}
+
+.action {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  for mobiles  */
+@media only screen and (min-width:350px) {
+  .a {
+    width: 7vw;
+  }
+
+  .b {
+    width: 25vw;
+  }
+
+  .c {
+    height: 4vh;
+    width: 15vw;
+  }
+  .hello {
+    font-size: 12px;
+  }
+
+  .action {
+    width: 15vw;
+    height: 10vh;
+  }
+}
+
+/*  for ipads  */
+@media only screen and (min-width:750px) {
+  .hello {
+    font-size: 15px;
+  }
+  .b {
+    width: 30vw;
+  }
+
+  .c {
+    width: 10vw;
+  }
+
+  .d {
+    width: 20vw;
+  }
+
+  .e {
+    width: 10vw;
+  }
+
+  .action {
+    flex-direction: row;
+  }
+}
+
+/*  for laptops  */
+@media only screen and (min-width:1000px) {
+  .hello {
+    font-size: 17px;
+  }
+  .action {
+    height: 4vh;
+  }
+}
+
+
+/*APP CSS */
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding-bottom: 20px 0px;
+  background-color: white;
+  margin: 15px auto;
+}
+
+/*  for mobiles  */
+@media only screen and (min-width:350px) {
+  .app {
+    width: 95vw;
+  }
+}
+
+/*  for ipads  */
+@media only screen and (min-width:750px) {
+  .app {
+    width: 90vw;
+  }
+}
+
+/*HEADER PAGE */
+.header {
+  /* margin-top: 20px; */
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin {
+  margin: auto;
+  padding: 1vh;
+  width: 88vw;
+  text-align: center;
+  background-color: aquamarine;
+  font-size: x-large;
+  font-weight: 700;
+  color: white;
+  border-radius: 10px;
+  border-bottom: 5px solid azure;
+}
+
+.headinput {
+  margin-top: 3vh;
+  text-align: center;
+}
+
+.searchbar {
+  margin: auto;
+  width: 86vw;
+  text-align: center;
+  outline: none;
+}
+
+/* for mobiles */
+@media only screen and (min-width:350px) {
+  .header {
+    margin-top: 0vh;
+  }
+
+  .admin {
+    width: 92vw;
+  }
+
+  .searchbar {
+    width: 89.5vw;
+  }
+}
+
+/* for pads */
+@media only screen and (min-width:750px) {
+  .header {
+    margin:auto;
+  }
+
+  .admin {
+    width: 87vw;
+  }
+
+  .searchbar {
+    width: 65vw;
+  }
+}
+
+/* for laptops */
+@media only screen and (min-width:1000px) {
+  .admin {
+    width: 89vw;
+  }
+
+  .searchbar {
+    width: 60vw;
+  }
+}
+
+/* CSS OF MAIN SECTION*/
+.table {
+  height: auto;
+  width: 90vw;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.thead {  
+  height: 7vh;
+  margin-top: 2vh;
+  background-color: aquamarine;
+  font-size: large;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.tbody {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+tbody tr:hover {
+  background-color: rgba(128, 128, 128, 0.41);
+  color: brown;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.edit {
+  padding-right: 1vh;
+  color: rgba(0, 128, 0, 0.524);
+  cursor: pointer;
+  font-size: 5vh;
+}
+
+.delr {
+  color: red;
+  cursor: pointer;
+  font-size: 5vh;
+}
+
+.box {
+  margin-left: 1vh;
+  cursor: pointer;
+}
+
+.duringedit {
+  border: 2px solid gold;
+}
+
+.row1 {
+  margin-left: 3vw;
+  width: 5vw;
+  text-align: center;
+  background-color: white;
+}
+
+.row2 {
+  width: 17vw;
+  text-align: center;
+  background-color: white;
+}
+
+/* for mobiles */
+@media only screen and (min-width:350px) {
+  .thead { 
+    height: 5vh;
+   }
+  .table {
+    width: 95vw;
+  }
+
+  .edit {
+    margin-bottom: 2px;
+    padding-right: 0px;
+    font-size: 2vh;
+  }
+
+  .delr {
+    margin-top: 2px;
+    font-size: 2vh;
+  }
+}
+
+/* for ipads */
+@media only screen and (min-width:750px) {
+  .table {
+    width: 90vw;
+  }
+
+  .thead {
+    height: 5vh;
+    text-align: center;
+  }
+
+  .edit {
+    font-size: 2vh;
+  }
+
+  .delr {
+    font-size: 2vh;
+  }
+}
+
+/* for laptops */
+@media only screen and (min-width:1000px) {
+  .table {
+    width: 90vw;
+  }
+
+  .edit {
+    font-size: 3vh;
+  }
+
+  .delr {
+    font-size: 3vh;
+  }
+}
+
+/* CSS OF ADD USER */
+.adduser {
+  margin-top: 0px;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  height: auto;
+  width: 90vw;
+  border: 1px solid black;
+  border-top: none;
+  margin: auto;
+  text-align: center;
+}
+
+.adduser_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adduser_form_entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.idlable {
+  margin-left: 1vw;
+}
+
+.x {
+  margin-right: 1px;
+  text-align: center;
+}
+
+.y {
+  margin-right: 2px;
+  text-align: center;
+}
+
+.z {
+  margin-left: 3vw;
+}
+
+.btn {
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 128, 0, 0.864);
+  color: white;
+  cursor: pointer;
+}
+
+/* for mobiles */
+@media only screen and (min-width:350px) {
+  .adduser {
+    width: 95vw;
+  }
+
+  .adduser_form {
+    justify-content: space-between;
+  }
+
+  .adduser_form_entry {
+    width: 95vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bold {
+    padding-left: 2px;
+  }
+
+  .x {
+    width: 30vw;
+  }
+
+  .y {
+    width: 25vw;
+  }
+
+  .btn {
+    margin-top: 1vh;
+    font-size: 20px;
+  }
+}
+
+/* for ipads */
+@media only screen and (min-width:750px) {
+  .adduser {
+    padding-top: 10px;
+    width: 89.5vw;
+    border-bottom: none;
+  }
+
+  .adduser_form {
+    flex-direction: row;
+  }
+
+  .bold {
+    padding-left: 2px;
+  }
+
+  .x {
+    width: 10vw;
+    margin-right: 0.5vw;
+  }
+
+  .y {
+    width: 10vw;
+    margin-right: 0.5vw;
+  }
+
+  .btn {
+    width: 8vw;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 5px;
+    font-size: 10px;
+  }
+}
+
+/* for laptops*/
+@media only screen and (min-width:1000px) {
+  .adduser {
+    padding: 5px 0px;
+    width: 90vw;
+  }
+
+  .adduser_form_entry {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .one {
+    width: 60vw;
+    justify-content: space-between;
+  }
+
+  .bold {
+    padding-left: 5px;
+  }
+
+  .x {
+    width: 5vw;
+    margin-right: 0.5vw;
+  }
+
+  .y {
+    width: 12vw;
+    margin-right: 1vw;
+  }
+
+  .w {
+    width: 20vw;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+/* CSS OF FOOTER AREA*/
+
+.footer {
+  margin-top: 0px;
+  height: 7vh;
+  width: 92.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: auto;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+.footerLeft {
+  margin-top: 60px;
+  margin-left: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid black;
+  border-top: none;
+}
+
+.delete {
+  margin: 10px;
+  padding: 5px 0px;
+  width: 45%;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.741);
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.footerRight {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -90px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  border: none;
+}
+
+.icon {
+  margin: 4px;
+  margin-right: 0px;
+  padding: 5px;
+  font-size: 15px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* for mobiles */
+@media only screen and (min-width:350px) {
+  .footerLeft {
+    margin-top: 50px;
+    width: 103%;
+  }
+
+  .delete {
+    margin: 15px;
+    padding: 10px 0px;
+    width: 35%;
+  }
+
+  .footerRight {
+    margin-top: -110px;
+    width: 99%;
+  }
+
+  .icon {
+    padding: 10px;
+  }
+}
+
+/* for ipdas */
+@media only screen and (min-width:750px) {
+  .footer {
+    width: 89vw;
+    height: auto;
+    flex-direction: row;
+    justify-content: left;
+    border-bottom: 1px solid black;
+    padding: 0px;
+    padding-bottom: 5px;
+  }
+
+  .footerLeft {
+    margin-top: 0px;
+    width: 15vw;
+    align-items: left;
+    border: none;
+  }
+
+  .delete {
+    padding: 15px 0px;
+    width: 90%;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+
+  .footerRight {
+    margin-top: 0px;
+    width: 85vw;
+  }
+
+  .icon {
+    margin: 5px;
+    margin-right: 2px;
+    font-size: 20px;
+  }
+}
+
+/* for laptops */
+@media only screen and (min-width:1000px) {
+  .footer {
+    width: 90vw;
+  }
+
+  .footerLeft {
+    width: 12vw;
+  }
+
+  .delete {
+    padding: 7px 0px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .icon {
+    padding: 5px;
+  }
+}
